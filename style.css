@@ -83,6 +83,11 @@ section {
     overflow: hidden;
     border: 1px solid rgba(255, 255, 255, 0.3);
     border-radius: .875rem;
+    transition: background-color 0.1s, border-color 0.1s;
+}
+.series--card:hover{
+    border-color: white; 
+    box-shadow: white 3px 3px 19px 2px;
 }
 
 .card--img {
@@ -91,7 +96,7 @@ section {
 }
 
 .card--conteudo {
-    padding: 0px 20px 20px 20px;
+    padding: 20px 20px 20px 20px;
     display: flex;
     flex: 1 0;
     flex-direction: column;
@@ -116,8 +121,10 @@ section {
 }
 
 .btn--primario {
+    
     border: 1px solid transparent;
-    background-color: #e50914;
+    border-radius: 20px;
+    background-color: transparent;
     background-image: linear-gradient(180deg, #e50914, #db0510);
     box-shadow: 0 1px 0 rgba(0, 0, 0, .45);
     color: #fff;
@@ -128,11 +135,22 @@ section {
     cursor: pointer;
     letter-spacing: 1.5px;
     justify-self: flex-end;
+    transition: background-color 0.3s, border-color 0.3s;
 }
 
 .btn--primario:active {
-    background-color: #e50914;
+    color: white;
+    background-color: transparent;
     background-image: linear-gradient(180deg, hsl(357, 92%, 37%), hsl(357, 96%, 34%));
+    border: 1px solid white;
+    border-radius: 20px;
+} 
+
+.btn--primario:hover {
+    background-color: #e50914;
+    border-color: white; 
+    box-shadow: white 1px 1px 5px 2px;
+
 
 }
 
@@ -168,4 +186,4 @@ i {
 
 #favoritos img {
     width: 196px;
-}
+} 

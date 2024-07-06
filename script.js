@@ -59,4 +59,24 @@ const seriesArray = [
     description:
       "Monkey D. Luffy e sua tripulação de piratas buscam o lendário tesouro One Piece para se tornarem os reis dos piratas.",
   },
-];
+]; 
+
+const seriesContainer = document.querySelector("#container--series"); 
+
+for (const netflix of seriesArray) {
+    const series = document.createElement("article");
+    series.classList.add("series--card");
+    series.innerHTML = `
+    <img class="card--img" src=${netflix.image} alt="Breaking Bad">
+<div class="card--conteudo">
+
+  
+    <h2 class="card--titulo">${netflix.name}<i class="fa-regular fa-heart"></i></h2>
+    <p class="card--desc">${netflix.description}</p>
+    <button class="btn--primario">Veja Agora</button>
+    
+</div>`
+
+seriesContainer.append(series)
+}  
+
